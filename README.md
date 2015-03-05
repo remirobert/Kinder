@@ -2,7 +2,7 @@
   <img src ="https://raw.githubusercontent.com/remirobert/Kinder/master/tindView/kinderBanner.png"/>
 </p>
 </br>
-
+<br>
 
 
 Written on Swift for iOS 7.0+.
