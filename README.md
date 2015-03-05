@@ -16,7 +16,7 @@ Kinder is similar to the Tinder system.
 <p align="center">
   <img src ="https://raw.githubusercontent.com/remirobert/Kinder/master/tindView/animKinder.gif"/>
 </p>
-</br>
-</br>
+<br>
+<br>
 
 <img src ="https://raw.githubusercontent.com/remirobert/Kinder/master/tindView/how.png"/>
