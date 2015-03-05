@@ -42,7 +42,7 @@ protocol KinderDelegate {
 
 Kinder Model:
 =============
-Kinder deals with model. If you have special model because you use an API or something else, you can juste inherited of the **KinderModelCard**.
+Kinder deals with model. If you have special model because you use an API or something else, you can juste inherited of the **KinderModelCard**. This model is important because all the content you will passe throw Kinder must be a **KinderModelCard**.
 ```swift
 protocol KinderModelCard {
     var image: UIImage! { get set }
