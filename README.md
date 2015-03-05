@@ -27,11 +27,24 @@ You can gradually add content (**Lazy loading**).
 
 <br>
 Kinder protocol:
+================
 ```swift
 protocol KinderDelegate {
     func acceptCard(card: KinderModelCard?)
     func cancelCard(card: KinderModelCard?) // action signal
     func signalReload()                     // signal to load more data
     func reloadCard() -> [KinderModelCard]? //return your datas to the Kinder controller
+}
+```
+
+<br>
+
+Kinder Model:
+=============
+```swift
+protocol KinderModelCard {
+    var image: UIImage! { get set }
+    var content: String! { get set }
+    var desc: String! { get set }
 }
 ```
