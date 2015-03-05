@@ -22,5 +22,16 @@ Kinder is similar to the Tinder system.
 <img src ="https://raw.githubusercontent.com/remirobert/Kinder/master/tindView/how.png"/>
 
 Kinder to a stack of content, only three of them are displayed.
-Kinder uses delegations to informs action or seek more content.
-You can gradually add content (Lazy loading).
+Kinder uses **delegations** to informs action or seek more content.
+You can gradually add content (**Lazy loading**).
+
+<br>
+Kinder protocol:
+```swift
+protocol KinderDelegate {
+    func acceptCard(card: KinderModelCard?)
+    func cancelCard(card: KinderModelCard?)
+    func signalReload()
+    func reloadCard() -> [KinderModelCard]?
+}
+```
