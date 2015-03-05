@@ -67,6 +67,9 @@ class RRVoteViewController: UIViewController {
     private var cards: Array<CardView> = Array()
     
     func reloadData() {
+        
+        
+        
         if let data = self.delegate?.reloadCard() {
             for currentData in data {
                 dataCards.append(currentData)
@@ -125,7 +128,9 @@ class RRVoteViewController: UIViewController {
     
     private func manageCards() {
         if dataCards.count < 3 - self.cards.count + 1 {
+            NSLog("call signal reload")
             self.delegate?.signalReload()
+            NSLog("call signal reload END")
 //            if let data = self.delegate?.reloadCard() {
 //                for currentData in data {
 //                    dataCards.append(currentData)
@@ -159,7 +164,7 @@ class RRVoteViewController: UIViewController {
         }
     }
     
-    private func acceptCardView() {
+    @objc private func acceptCardView() {
         if cards.count == 0 {
             return
         }
@@ -181,7 +186,7 @@ class RRVoteViewController: UIViewController {
         self.manageCards()
     }
     
-    private func cancelCardView() {
+    @objc private func cancelCardView() {
         if cards.count == 0 {
             return
         }
@@ -225,7 +230,7 @@ class RRVoteViewController: UIViewController {
         initCardView()
     }
 
-    private func handleGesture(recognizer: UIPanGestureRecognizer) {
+    @objc private func handleGesture(recognizer: UIPanGestureRecognizer) {
         
         var pointTranslation = recognizer.translationInView(self.view)
         pointTranslation = CGPointMake(recognizer.view!.center.x + pointTranslation.x, recognizer.view!.center.y + pointTranslation.y)
