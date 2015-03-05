@@ -29,6 +29,7 @@ extension UIButton {
 protocol RRVoteDelegate {
     func acceptCard(card: ModelCard?)
     func cancelCard(card: ModelCard?)
+    func signalReload()
     func reloadCard() -> [ModelCard]?
 }
 
@@ -66,7 +67,11 @@ class RRVoteViewController: UIViewController {
     private var cards: Array<CardView> = Array()
     
     func reloadData() {
-        
+        if let data = self.delegate?.reloadCard() {
+            for currentData in data {
+                dataCards.append(currentData)
+            }
+        }
     }
     
     private func initStyleCardView(index: Int) {
@@ -120,11 +125,12 @@ class RRVoteViewController: UIViewController {
     
     private func manageCards() {
         if dataCards.count < 3 - self.cards.count + 1 {
-            if let data = self.delegate?.reloadCard() {
-                for currentData in data {
-                    dataCards.append(currentData)
-                }
-            }
+            self.delegate?.signalReload()
+//            if let data = self.delegate?.reloadCard() {
+//                for currentData in data {
+//                    dataCards.append(currentData)
+//                }
+//            }
         }
 
         cards.removeAtIndex(0)
