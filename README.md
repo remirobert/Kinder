@@ -28,6 +28,7 @@ You can gradually add content (**Lazy loading**).
 <br>
 Kinder protocol:
 ================
+Your parent control, must implement this protocol to make action. For example call a web service for like or dislike, and load more content.
 ```swift
 protocol KinderDelegate {
     func acceptCard(card: KinderModelCard?)
@@ -41,6 +42,7 @@ protocol KinderDelegate {
 
 Kinder Model:
 =============
+Kinder deals with model. If you have special model because you use an API or something else, you can juste inherited of the **KinderModelCard**.
 ```swift
 protocol KinderModelCard {
     var image: UIImage! { get set }
