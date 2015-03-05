@@ -62,7 +62,10 @@ class CardView: UIView {
     
     init(size: CGSize) {
         super.init(frame: CGRectMake(0, 0, size.width, size.height))
-        self.backgroundColor = UIColor(red:0.97, green:0.97, blue:0.97, alpha:1)
+        self.backgroundColor = UIColor.whiteColor()
+        
+        self.layer.borderWidth = 5
+        self.layer.borderColor = UIColor(red:0.88, green:0.88, blue:0.88, alpha:1).CGColor
         self.layer.cornerRadius = 5
         self.layer.masksToBounds = true
         self.imageViewContent.frame.size = CGSizeMake(size.width, size.width)

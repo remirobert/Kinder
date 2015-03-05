@@ -215,7 +215,7 @@ class RRVoteViewController: UIViewController {
         self.view.addSubview(cancelButton)
         self.view.addSubview(infoButton)
         
-        self.view.backgroundColor = UIColor(red:0.93, green:0.93, blue:0.94, alpha:1)
+        self.view.backgroundColor = UIColor(red:0.93, green:0.93, blue:0.93, alpha:1)
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -292,7 +292,7 @@ class RRVoteViewController: UIViewController {
                 return
             }
             
-            UIView.animateWithDuration(0.5, delay: 0.2, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.4,
+            UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.4,
                 options: UIViewAnimationOptions.allZeros, animations: { () -> Void in
                                         
                     if !self.isAccept && !self.isCancel && recognizer.view != nil {

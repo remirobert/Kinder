@@ -22,7 +22,7 @@ class ViewController: UIViewController, RRVoteDelegate {
         
     }
 
-    func fetchData(completion: (()->())?) {
+    func fetchData(int: Int, completion: (()->())?) {
         
         let newCard = Model()
         
@@ -37,7 +37,7 @@ class ViewController: UIViewController, RRVoteDelegate {
             return
         }
         else {
-            self.fetchData(completion)
+            self.fetchData(0, completion)
         }
         
     }
@@ -45,9 +45,11 @@ class ViewController: UIViewController, RRVoteDelegate {
     func signalReload() {
         println("call signal")
         data.removeAll(keepCapacity: false)
-        self.fetchData { () -> () in
+        
+        self.fetchData(0, completion: { () -> () in
             self.controller.reloadData()
-        }
+        })
+        
         println("end signl")
     }
     
@@ -58,10 +60,10 @@ class ViewController: UIViewController, RRVoteDelegate {
     
     override func viewDidAppear(animated: Bool) {
 
-        fetchData { () -> () in
+        fetchData(0, completion: { () -> () in
             self.controller.delegate = self
             self.presentViewController(self.controller, animated: true, completion: nil)
-        }
+        })
 
     }
     
