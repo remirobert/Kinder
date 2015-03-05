@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CardView: UIView {
+class KinderCardView: UIView {
 
     private lazy var imageViewContent: UIImageView = {
         let imageView = UIImageView()

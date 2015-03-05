@@ -8,16 +8,16 @@
 
 import UIKit
 
-class ViewController: UIViewController, RRVoteDelegate {
+class ViewController: UIViewController, KinderDelegate {
 
-    var data: Array<ModelCard>! = Array()
-    let controller = RRVoteViewController()
+    var data: Array<KinderModelCard>! = Array()
+    let controller = KinderViewController()
     
-    func acceptCard(card: ModelCard?) {
+    func acceptCard(card: KinderModelCard?) {
         
     }
     
-    func cancelCard(card: ModelCard?) {
+    func cancelCard(card: KinderModelCard?) {
         
     }
 
@@ -52,7 +52,7 @@ class ViewController: UIViewController, RRVoteDelegate {
         println("end signl")
     }
     
-    func reloadCard() -> [ModelCard]? {
+    func reloadCard() -> [KinderModelCard]? {
         NSLog("reload data")
         return data
     }

@@ -28,20 +28,20 @@ extension UIButton {
     }
 }
 
-protocol RRVoteDelegate {
-    func acceptCard(card: ModelCard?)
-    func cancelCard(card: ModelCard?)
+protocol KinderDelegate {
+    func acceptCard(card: KinderModelCard?)
+    func cancelCard(card: KinderModelCard?)
     func signalReload()
-    func reloadCard() -> [ModelCard]?
+    func reloadCard() -> [KinderModelCard]?
 }
 
-class RRVoteViewController: UIViewController {
+class KinderViewController: UIViewController {
     
-    private var dataCards: Array<ModelCard>! = Array()
+    private var dataCards: Array<KinderModelCard>! = Array()
     private var isAccept: Bool = false
     private var isCancel: Bool = false
     private var recogniserGesture: UIGestureRecognizer!
-    var delegate: RRVoteDelegate?
+    var delegate: KinderDelegate?
 
     lazy var acceptButton: UIButton! = {
         let button = UIButton(frame: CGRectMake(self.view.frame.size.width - 95, self.view.frame.size.height - 95, 75, 75))
@@ -72,7 +72,7 @@ class RRVoteViewController: UIViewController {
         return button
     }()
     
-    private var cards: Array<CardView> = Array()
+    private var cards: Array<KinderCardView> = Array()
     
     func reloadData() {
         if let data = self.delegate?.reloadCard() {
@@ -114,7 +114,7 @@ class RRVoteViewController: UIViewController {
         
         for var index = cards.count; index < 3; index++ {
             if dataCards.count > 0 {
-                var newCard = CardView(size: CGSizeZero)
+                var newCard = KinderCardView(size: CGSizeZero)
                 
                 newCard.size = CGSizeMake(self.view.frame.size.width - 65, self.view.frame.size.width - 5)
                 newCard.center = CGPointMake(self.view.center.x, 0)
@@ -148,7 +148,7 @@ class RRVoteViewController: UIViewController {
     
     private func initCardView() {
         for (var index = 0; index <= 2 && index < dataCards.count; index++) {
-            var newCard = CardView(size: CGSizeZero)
+            var newCard = KinderCardView(size: CGSizeZero)
             
             newCard.imageContent = dataCards[index].image
             newCard.titleContent = dataCards[index].content

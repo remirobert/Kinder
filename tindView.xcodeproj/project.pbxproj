@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BB5A47CC1AA786F900F1ABB2 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5A47CB1AA786F800F1ABB2 /* CardView.swift */; };
-		BB7BC9AB1AA8A01900B99CA4 /* ModelCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7BC9AA1AA8A01900B99CA4 /* ModelCard.swift */; };
+		BB5A47CC1AA786F900F1ABB2 /* KinderCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5A47CB1AA786F800F1ABB2 /* KinderCardView.swift */; };
+		BB7BC9AB1AA8A01900B99CA4 /* KinderModelCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7BC9AA1AA8A01900B99CA4 /* KinderModelCard.swift */; };
 		BBFBDA321AA7541900426CBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFBDA311AA7541900426CBE /* AppDelegate.swift */; };
 		BBFBDA341AA7541900426CBE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFBDA331AA7541900426CBE /* ViewController.swift */; };
 		BBFBDA371AA7541900426CBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBFBDA351AA7541900426CBE /* Main.storyboard */; };
 		BBFBDA391AA7541900426CBE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBFBDA381AA7541900426CBE /* Images.xcassets */; };
 		BBFBDA3C1AA7541900426CBE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBFBDA3A1AA7541900426CBE /* LaunchScreen.xib */; };
 		BBFBDA481AA7541900426CBE /* tindViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFBDA471AA7541900426CBE /* tindViewTests.swift */; };
-		BBFBDA521AA7542F00426CBE /* RRVoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFBDA511AA7542F00426CBE /* RRVoteViewController.swift */; };
+		BBFBDA521AA7542F00426CBE /* KinderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFBDA511AA7542F00426CBE /* KinderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,8 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BB5A47CB1AA786F800F1ABB2 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
-		BB7BC9AA1AA8A01900B99CA4 /* ModelCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelCard.swift; sourceTree = "<group>"; };
+		BB5A47CB1AA786F800F1ABB2 /* KinderCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KinderCardView.swift; sourceTree = "<group>"; };
+		BB7BC9AA1AA8A01900B99CA4 /* KinderModelCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KinderModelCard.swift; sourceTree = "<group>"; };
 		BBFBDA2C1AA7541900426CBE /* tindView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tindView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBFBDA301AA7541900426CBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBFBDA311AA7541900426CBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,7 +41,7 @@
 		BBFBDA411AA7541900426CBE /* tindViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tindViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBFBDA461AA7541900426CBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBFBDA471AA7541900426CBE /* tindViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tindViewTests.swift; sourceTree = "<group>"; };
-		BBFBDA511AA7542F00426CBE /* RRVoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RRVoteViewController.swift; sourceTree = "<group>"; };
+		BBFBDA511AA7542F00426CBE /* KinderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KinderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,9 +89,9 @@
 				BBFBDA381AA7541900426CBE /* Images.xcassets */,
 				BBFBDA3A1AA7541900426CBE /* LaunchScreen.xib */,
 				BBFBDA2F1AA7541900426CBE /* Supporting Files */,
-				BBFBDA511AA7542F00426CBE /* RRVoteViewController.swift */,
-				BB5A47CB1AA786F800F1ABB2 /* CardView.swift */,
-				BB7BC9AA1AA8A01900B99CA4 /* ModelCard.swift */,
+				BBFBDA511AA7542F00426CBE /* KinderViewController.swift */,
+				BB5A47CB1AA786F800F1ABB2 /* KinderCardView.swift */,
+				BB7BC9AA1AA8A01900B99CA4 /* KinderModelCard.swift */,
 			);
 			path = tindView;
 			sourceTree = "<group>";
@@ -222,10 +222,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBFBDA341AA7541900426CBE /* ViewController.swift in Sources */,
-				BBFBDA521AA7542F00426CBE /* RRVoteViewController.swift in Sources */,
-				BB5A47CC1AA786F900F1ABB2 /* CardView.swift in Sources */,
+				BBFBDA521AA7542F00426CBE /* KinderViewController.swift in Sources */,
+				BB5A47CC1AA786F900F1ABB2 /* KinderCardView.swift in Sources */,
 				BBFBDA321AA7541900426CBE /* AppDelegate.swift in Sources */,
-				BB7BC9AB1AA8A01900B99CA4 /* ModelCard.swift in Sources */,
+				BB7BC9AB1AA8A01900B99CA4 /* KinderModelCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

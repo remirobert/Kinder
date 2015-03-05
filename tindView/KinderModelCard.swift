@@ -8,13 +8,13 @@
 
 import UIKit
 
-protocol ModelCard {
+protocol KinderModelCard {
     var image: UIImage! { get set }
     var content: String! { get set }
     var desc: String! { get set }
 }
 
-class Model: NSObject, ModelCard {
+class Model: NSObject, KinderModelCard {
     var image: UIImage!
     var content: String!
     var desc: String!
