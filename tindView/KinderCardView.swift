@@ -10,14 +10,14 @@ import UIKit
 
 class KinderCardView: UIView {
 
-    private lazy var imageViewContent: UIImageView = {
+    private var imageViewContent: UIImageView = {
         let imageView = UIImageView()
         imageView.layer.masksToBounds = true
         imageView.contentMode = UIViewContentMode.ScaleAspectFill
         return imageView
     }()
     
-    private lazy var titleLabelContent: UILabel = {
+    private var titleLabelContent: UILabel = {
         let label = UILabel()
         label.textAlignment = NSTextAlignment.Center
         label.textColor = UIColor.blackColor()

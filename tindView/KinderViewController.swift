@@ -43,7 +43,7 @@ class KinderViewController: UIViewController {
     private var recogniserGesture: UIGestureRecognizer!
     var delegate: KinderDelegate?
 
-    lazy var acceptButton: UIButton! = {
+    private lazy var acceptButton: UIButton! = {
         let button = UIButton(frame: CGRectMake(self.view.frame.size.width - 95, self.view.frame.size.height - 95, 75, 75))
         button.layer.cornerRadius = 37.5
         button.backgroundColor = UIColor.whiteColor()
@@ -52,7 +52,7 @@ class KinderViewController: UIViewController {
         return button
     }()
 
-    lazy var infoButton: UIButton! = {
+    private lazy var infoButton: UIButton! = {
         let button = UIButton()
         button.frame.size = CGSizeMake(50, 50)
         button.layer.cornerRadius = 25
@@ -63,7 +63,7 @@ class KinderViewController: UIViewController {
         return button
     }()
 
-    lazy var cancelButton: UIButton! = {
+    private lazy var cancelButton: UIButton! = {
         let button = UIButton(frame: CGRectMake(20, self.view.frame.size.height - 95, 75, 75))
         button.layer.cornerRadius = 37.5
         button.backgroundColor = UIColor.whiteColor()
