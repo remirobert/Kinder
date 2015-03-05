@@ -20,3 +20,7 @@ Kinder is similar to the Tinder system.
 <br>
 
 <img src ="https://raw.githubusercontent.com/remirobert/Kinder/master/tindView/how.png"/>
+
+Kinder to a stack of content, only three of them are displayed.
+Kinder uses delegations to informs action or seek more content.
+You can gradually add content (Lazy loading).
