@@ -60,3 +60,8 @@ class CustomModel: NSObject, KinderModelCard {
     var isVoted: Bool!
 }
 ```
+
+<br>
+Referencing to the example project.
+If you have any questions do not hesitate.
+And do not hesitate to contribute, to build something more impressive than that have already.
