@@ -13,6 +13,7 @@ extension UIButton {
         UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.2, initialSpringVelocity: 0.2,
             options: UIViewAnimationOptions.allZeros, animations: { () -> Void in
                 self.frame.size = CGSizeMake(75, 75)
+                self.layer.cornerRadius = 37.5
                 self.frame.origin = centerPosition
         }, completion: nil)
     }
@@ -21,6 +22,7 @@ extension UIButton {
         UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.4,
             options: UIViewAnimationOptions.allZeros, animations: { () -> Void in
                 self.frame.size = CGSizeMake(100, 100)
+                self.layer.cornerRadius = 50
                 self.frame.origin = centerPosition
             }, completion: nil)
     }
@@ -43,6 +45,8 @@ class RRVoteViewController: UIViewController {
 
     lazy var acceptButton: UIButton! = {
         let button = UIButton(frame: CGRectMake(self.view.frame.size.width - 95, self.view.frame.size.height - 95, 75, 75))
+        button.layer.cornerRadius = 37.5
+        button.backgroundColor = UIColor.whiteColor()
         button.setImage(UIImage(named: "accept")!.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate), forState: UIControlState.Normal)
         button.tintColor = UIColor(red:0.33, green:0.84, blue:0.41, alpha:1)
         return button
@@ -51,6 +55,8 @@ class RRVoteViewController: UIViewController {
     lazy var infoButton: UIButton! = {
         let button = UIButton()
         button.frame.size = CGSizeMake(50, 50)
+        button.layer.cornerRadius = 25
+        button.backgroundColor = UIColor.whiteColor()
         button.center = CGPointMake(self.view.center.x, self.acceptButton.center.y)
         button.setImage(UIImage(named: "info")!.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate), forState: UIControlState.Normal)
         button.tintColor = UIColor.grayColor()
@@ -59,6 +65,8 @@ class RRVoteViewController: UIViewController {
 
     lazy var cancelButton: UIButton! = {
         let button = UIButton(frame: CGRectMake(20, self.view.frame.size.height - 95, 75, 75))
+        button.layer.cornerRadius = 37.5
+        button.backgroundColor = UIColor.whiteColor()
         button.setImage(UIImage(named: "cancel")!.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate), forState: UIControlState.Normal)
         button.tintColor = UIColor(red:0.99, green:0.24, blue:0.22, alpha:1)
         return button
@@ -125,14 +133,7 @@ class RRVoteViewController: UIViewController {
     
     private func manageCards() {
         if dataCards.count < 3 - self.cards.count + 1 {
-            NSLog("call signal reload")
             self.delegate?.signalReload()
-            NSLog("call signal reload END")
-//            if let data = self.delegate?.reloadCard() {
-//                for currentData in data {
-//                    dataCards.append(currentData)
-//                }
-//            }
         }
 
         cards.removeAtIndex(0)

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BB07A28F1AA8B3DB0005F98F /* Crackers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB07A28E1AA8B3DB0005F98F /* Crackers.swift */; };
 		BB5A47CC1AA786F900F1ABB2 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5A47CB1AA786F800F1ABB2 /* CardView.swift */; };
 		BB7BC9AB1AA8A01900B99CA4 /* ModelCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7BC9AA1AA8A01900B99CA4 /* ModelCard.swift */; };
 		BBFBDA321AA7541900426CBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFBDA311AA7541900426CBE /* AppDelegate.swift */; };
@@ -30,7 +29,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BB07A28E1AA8B3DB0005F98F /* Crackers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Crackers.swift; sourceTree = "<group>"; };
 		BB5A47CB1AA786F800F1ABB2 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		BB7BC9AA1AA8A01900B99CA4 /* ModelCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelCard.swift; sourceTree = "<group>"; };
 		BBFBDA2C1AA7541900426CBE /* tindView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tindView.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,14 +62,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BB07A28D1AA8B3DB0005F98F /* Crackers */ = {
-			isa = PBXGroup;
-			children = (
-				BB07A28E1AA8B3DB0005F98F /* Crackers.swift */,
-			);
-			path = Crackers;
-			sourceTree = "<group>";
-		};
 		BBFBDA231AA7541900426CBE = {
 			isa = PBXGroup;
 			children = (
@@ -93,7 +83,6 @@
 		BBFBDA2E1AA7541900426CBE /* tindView */ = {
 			isa = PBXGroup;
 			children = (
-				BB07A28D1AA8B3DB0005F98F /* Crackers */,
 				BBFBDA311AA7541900426CBE /* AppDelegate.swift */,
 				BBFBDA331AA7541900426CBE /* ViewController.swift */,
 				BBFBDA351AA7541900426CBE /* Main.storyboard */,
@@ -233,7 +222,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBFBDA341AA7541900426CBE /* ViewController.swift in Sources */,
-				BB07A28F1AA8B3DB0005F98F /* Crackers.swift in Sources */,
 				BBFBDA521AA7542F00426CBE /* RRVoteViewController.swift in Sources */,
 				BB5A47CC1AA786F900F1ABB2 /* CardView.swift in Sources */,
 				BBFBDA321AA7541900426CBE /* AppDelegate.swift in Sources */,
