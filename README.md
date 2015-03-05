@@ -50,3 +50,13 @@ protocol KinderModelCard {
     var desc: String! { get set }
 }
 ```
+
+```Swift
+class CustomModel: NSObject, KinderModelCard {
+    var image: UIImage!
+    var content: String!
+    var desc: String!
+    var id: String!
+    var isVoted: Bool!
+}
+```
