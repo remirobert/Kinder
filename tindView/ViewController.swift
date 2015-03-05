@@ -39,40 +39,16 @@ class ViewController: UIViewController, RRVoteDelegate {
         else {
             self.fetchData(completion)
         }
-
-        
-//        c.sendRequest(.GET, blockCompletion: { (data, response, error) -> () in
-//            //let json = data?.convertToJson() as? NSDictionary
-//            var error: NSError?
-//            let json: NSDictionary = NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers, error: &error) as NSDictionary
-//            NSLog("fecth new card")
-//            
-//            let newCard = Model()
-//            
-//            json["url"]
-//            
-//            newCard.image = UIImage(data: NSData(contentsOfURL: NSURL(string: json.objectForKey("url") as String)!)!)
-//            newCard.content = json.objectForKey("site") as String
-//            
-//            self.data.append(newCard)
-//            
-//            if self.data.count == 5 {
-//                completion!()
-//                return
-//            }
-//            else {
-//                self.fetchData(completion)
-//            }
-//            
-//        })
         
     }
     
     func signalReload() {
+        println("call signal")
         data.removeAll(keepCapacity: false)
         self.fetchData { () -> () in
             self.controller.reloadData()
         }
+        println("end signl")
     }
     
     func reloadCard() -> [ModelCard]? {

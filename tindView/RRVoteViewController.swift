@@ -67,12 +67,9 @@ class RRVoteViewController: UIViewController {
     private var cards: Array<CardView> = Array()
     
     func reloadData() {
-        
-        
-        
         if let data = self.delegate?.reloadCard() {
             for currentData in data {
-                dataCards.append(currentData)
+                self.dataCards.append(currentData)
             }
         }
     }
