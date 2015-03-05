@@ -65,7 +65,11 @@ class RRVoteViewController: UIViewController {
     
     private var cards: Array<CardView> = Array()
     
-    func initStyleCardView(index: Int) {
+    func reloadData() {
+        
+    }
+    
+    private func initStyleCardView(index: Int) {
         switch index {
         case 0:
             UIView.animateWithDuration(1, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.4,
@@ -93,7 +97,7 @@ class RRVoteViewController: UIViewController {
         }
     }
     
-    func addNewCard() {
+    private func addNewCard() {
         
         for var index = cards.count; index < 3; index++ {
             if dataCards.count > 0 {
@@ -114,7 +118,7 @@ class RRVoteViewController: UIViewController {
         }
     }
     
-    func manageCards() {
+    private func manageCards() {
         if dataCards.count < 3 - self.cards.count + 1 {
             if let data = self.delegate?.reloadCard() {
                 for currentData in data {
@@ -133,7 +137,7 @@ class RRVoteViewController: UIViewController {
         }
     }
     
-    func initCardView() {
+    private func initCardView() {
         for (var index = 0; index <= 2 && index < dataCards.count; index++) {
             var newCard = CardView(size: CGSizeZero)
             
@@ -149,7 +153,7 @@ class RRVoteViewController: UIViewController {
         }
     }
     
-    func acceptCardView() {
+    private func acceptCardView() {
         if cards.count == 0 {
             return
         }
@@ -171,7 +175,7 @@ class RRVoteViewController: UIViewController {
         self.manageCards()
     }
     
-    func cancelCardView() {
+    private func cancelCardView() {
         if cards.count == 0 {
             return
         }
@@ -215,7 +219,7 @@ class RRVoteViewController: UIViewController {
         initCardView()
     }
 
-    func handleGesture(recognizer: UIPanGestureRecognizer) {
+    private func handleGesture(recognizer: UIPanGestureRecognizer) {
         
         var pointTranslation = recognizer.translationInView(self.view)
         pointTranslation = CGPointMake(recognizer.view!.center.x + pointTranslation.x, recognizer.view!.center.y + pointTranslation.y)
@@ -302,5 +306,6 @@ class RRVoteViewController: UIViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
 }
