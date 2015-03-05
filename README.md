@@ -30,8 +30,8 @@ Kinder protocol:
 ```swift
 protocol KinderDelegate {
     func acceptCard(card: KinderModelCard?)
-    func cancelCard(card: KinderModelCard?)
-    func signalReload()
-    func reloadCard() -> [KinderModelCard]?
+    func cancelCard(card: KinderModelCard?) // action signal
+    func signalReload()                     // signal to load more data
+    func reloadCard() -> [KinderModelCard]? //return your datas to the Kinder controller
 }
 ```
