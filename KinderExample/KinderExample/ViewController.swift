@@ -25,11 +25,23 @@ class ViewController: UIViewController, KinderDelegate {
         
         let newCard = Model()
         
-        newCard.image = UIImage(data: NSData(contentsOfURL: NSURL(string: "http://thecatapi.com/api/images/get?format=src&type=gif")!)!)
-        newCard.content = "cat"
-        NSLog("fetch new data")
+        if let url = NSURL(string: "http://thecatapi.com/api/images/get?format=src&type=gif") {
+            if let data = NSData(contentsOfURL: url) {
+                newCard.image = UIImage(data: data)
+                newCard.content = "cat"
+                self.data.append(newCard)
+                NSLog("fetch new data")
+            }
+            else {
+                completion!()
+                return
+            }
+        }
+        else {
+            completion!()
+            return
+        }
         
-        self.data.append(newCard)
         
         if self.data.count == 5 {
             completion!()
