@@ -120,6 +120,7 @@ class KinderViewController: UIViewController {
                 newCard.center = CGPointMake(self.view.center.x, 0)
                 newCard.imageContent = dataCards.first?.image
                 newCard.titleContent = dataCards.first?.content
+                newCard.descContent = dataCards.first?.desc
                 dataCards.removeAtIndex(0)
                 cards.append(newCard)
                 initStyleCardView(index)
@@ -152,6 +153,7 @@ class KinderViewController: UIViewController {
             
             newCard.imageContent = dataCards[index].image
             newCard.titleContent = dataCards[index].content
+            newCard.descContent = dataCards[index].desc
             cards.append(newCard)
             initStyleCardView(index)
             self.view.addSubview(cards[index])
@@ -159,6 +161,14 @@ class KinderViewController: UIViewController {
         for (var index = cards.count - 1; index >= 0; index--) {
             self.view.bringSubviewToFront(cards[index])
             dataCards.removeAtIndex(index)
+        }
+    }
+    
+    @objc private func flipCardView() {
+        if let firstCard = cards.first {
+            if firstCard.descContent != "" {
+                firstCard.flipCard()
+            }
         }
     }
     
@@ -211,6 +221,7 @@ class KinderViewController: UIViewController {
         recogniserGesture = UIPanGestureRecognizer(target: self, action: "handleGesture:")
         acceptButton.addTarget(self, action: "acceptCardView", forControlEvents: UIControlEvents.TouchUpInside)
         cancelButton.addTarget(self, action: "cancelCardView", forControlEvents: UIControlEvents.TouchUpInside)
+        infoButton.addTarget(self, action: "flipCardView", forControlEvents: UIControlEvents.TouchUpInside)
         
         self.view.addSubview(acceptButton)
         self.view.addSubview(cancelButton)

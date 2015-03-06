@@ -29,6 +29,7 @@ class ViewController: UIViewController, KinderDelegate {
             if let data = NSData(contentsOfURL: url) {
                 newCard.image = UIImage(data: data)
                 newCard.content = "cat"
+                newCard.desc = "Image from the thecatapi.com\nUpdated daily with hundreds of new Kittys"
                 self.data.append(newCard)
                 NSLog("fetch new data")
             }
