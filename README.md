@@ -13,6 +13,12 @@ The user has the choice between gesture or buttons.
 Kinder is similar to the Tinder system. 
 
 <br>
+Kinder is available on CocoaPods. Just add the following to your project Podfile:
+```
+pod 'Kinder', '~> 1.0.0'
+```
+
+<br>
 <p align="center">
   <img src ="https://raw.githubusercontent.com/remirobert/Kinder/master/KinderExample/animKinder.gif"/>
 </p>
