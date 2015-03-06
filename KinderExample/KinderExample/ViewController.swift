@@ -44,7 +44,7 @@ class ViewController: UIViewController, KinderDelegate {
         }
         
         
-        if self.data.count == 5 {
+        if self.data.count == 10 {
             completion!()
             return
         }
