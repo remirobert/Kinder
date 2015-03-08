@@ -75,6 +75,6 @@ And do not hesitate to contribute, to build something more impressive than that 
 Currently used in the Adok application for iOS:
 
 <p align="center">
-  <img src ="https://raw.githubusercontent.com/remirobert/Kinder/master/KinderExample/iOS Simulator Screen Shot 08 Mar 2015 18.50.08_framed.png"/>
+  <img src ="https://raw.githubusercontent.com/remirobert/Kinder/master/KinderExample/iOS Simulator Screen Shot 08 Mar 2015 18.50.08_framed.gif"/>
 </p>
 </br>
