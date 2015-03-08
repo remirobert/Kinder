@@ -71,3 +71,10 @@ class CustomModel: NSObject, KinderModelCard {
 Referencing to the example project.
 If you have any questions do not hesitate.
 And do not hesitate to contribute, to build something more impressive than that have already.
+
+Currently used in the Adok application for iOS:
+
+<p align="center">
+  <img src ="https://raw.githubusercontent.com/remirobert/Kinder/master/KinderExample/iOS Simulator Screen Shot 08 Mar 2015 18.50.08_framed.png"/>
+</p>
+</br>
