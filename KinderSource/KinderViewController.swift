@@ -11,7 +11,7 @@ import UIKit
 extension UIButton {
     func hideButtonAnimation(centerPosition: CGPoint) {
         UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.2, initialSpringVelocity: 0.2,
-            options: UIViewAnimationOptions.allZeros, animations: { () -> Void in
+            options: UIViewAnimationOptions(), animations: { () -> Void in
                 self.frame.size = CGSizeMake(75, 75)
                 self.layer.cornerRadius = 37.5
                 self.frame.origin = centerPosition
@@ -20,7 +20,7 @@ extension UIButton {
     
     func displayButtonAnimation(centerPosition: CGPoint) {
         UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.4,
-            options: UIViewAnimationOptions.allZeros, animations: { () -> Void in
+            options: UIViewAnimationOptions(), animations: { () -> Void in
                 self.frame.size = CGSizeMake(100, 100)
                 self.layer.cornerRadius = 50
                 self.frame.origin = centerPosition
@@ -86,7 +86,7 @@ class KinderViewController: UIViewController {
         switch index {
         case 0:
             UIView.animateWithDuration(1, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.4,
-                options: UIViewAnimationOptions.allZeros, animations: { () -> Void in
+                options: UIViewAnimationOptions(), animations: { () -> Void in
                 self.cards[0].size = CGSizeMake(self.view.frame.size.width - 40, self.view.frame.size.width + 20)
                 self.cards[0].center = CGPointMake(self.view.center.x, self.view.center.y - 50)
                 self.cards[0].alpha = 1
@@ -94,14 +94,14 @@ class KinderViewController: UIViewController {
             cards[0].addGestureRecognizer(recogniserGesture)
         case 1:
             UIView.animateWithDuration(1, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.4,
-                options: UIViewAnimationOptions.allZeros, animations: { () -> Void in
+                options: UIViewAnimationOptions(), animations: { () -> Void in
                 self.cards[1].size = CGSizeMake(self.view.frame.size.width - 55, self.view.frame.size.width + 5)
                 self.cards[1].center = CGPointMake(self.view.center.x, self.view.center.y - 50 + 20)
                 self.cards[1].alpha = 0.75
             }, completion: nil)
         case 2:
             UIView.animateWithDuration(1, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.4,
-                options: UIViewAnimationOptions.allZeros, animations: { () -> Void in
+                options: UIViewAnimationOptions(), animations: { () -> Void in
                 self.cards[2].size = CGSizeMake(self.view.frame.size.width - 65, self.view.frame.size.width - 5)
                 self.cards[2].center = CGPointMake(self.view.center.x, self.view.center.y - 50 + 40)
                 self.cards[2].alpha = 0.5
@@ -184,7 +184,7 @@ class KinderViewController: UIViewController {
         var currentCard = cards[0]
         
         UIView.animateWithDuration(1, delay: 0.2, usingSpringWithDamping: 0.4, initialSpringVelocity: 1,
-            options: UIViewAnimationOptions.allZeros, animations: { () -> Void in
+            options: UIViewAnimationOptions(), animations: { () -> Void in
                 self.cards[0].frame.origin.x = self.view.frame.size.width
                 self.cards[0].alpha = 0
             }) { (anim: Bool) -> Void in
@@ -206,7 +206,7 @@ class KinderViewController: UIViewController {
         var currentCard = cards[0]
         
         UIView.animateWithDuration(1, delay: 0.2, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.4,
-            options: UIViewAnimationOptions.allZeros, animations: { () -> Void in
+            options: UIViewAnimationOptions(), animations: { () -> Void in
             self.cards[0].center.x = -self.view.frame.size.width
             }) { (anim: Bool) -> Void in
                 currentCard.removeFromSuperview()
@@ -305,7 +305,7 @@ class KinderViewController: UIViewController {
             }
             
             UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.4,
-                options: UIViewAnimationOptions.allZeros, animations: { () -> Void in
+                options: UIViewAnimationOptions(), animations: { () -> Void in
                                         
                     if !self.isAccept && !self.isCancel && recognizer.view != nil {
                         recognizer.view!.center = CGPointMake(self.view.center.x, self.view.center.y - 50)
