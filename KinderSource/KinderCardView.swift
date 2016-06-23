@@ -87,7 +87,7 @@ class KinderCardView: UIView {
         if isFliped == false {
             descLabelContent.frame.size = CGSizeMake(size.width - 20, size.height - 20)
             UIView.animateWithDuration(0.7, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.1,
-                options: UIViewAnimationOptions.allZeros, animations: { () -> Void in
+                options: UIViewAnimationOptions(), animations: { () -> Void in
                     self.transform = CGAffineTransformMakeScale(-1, 1)
                     self.imageViewContent.alpha = 0
                     self.titleLabelContent.alpha = 0
@@ -100,7 +100,7 @@ class KinderCardView: UIView {
         }
         else {
             UIView.animateWithDuration(0.7, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.1,
-                options: UIViewAnimationOptions.allZeros, animations: { () -> Void in
+                options: UIViewAnimationOptions(), animations: { () -> Void in
                     self.transform = CGAffineTransformMakeScale(1, 1)
                     self.imageViewContent.alpha = 1
                     self.titleLabelContent.alpha = 1
